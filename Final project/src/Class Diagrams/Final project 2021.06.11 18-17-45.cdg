@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Final project">
+  <ClassDiagramComponents>
+    <Class name="Employee" package="school_managment_system" visibility="public" isAbstract="true" xPosition="11.0" yPosition="7.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="phone" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="basicSalary" type="double" visibility="private"/>
+        <Field name="liveExpensive" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="_name"/>
+          <Argument type="int" name="_id"/>
+          <Argument type="String" name="_address"/>
+          <Argument type="String" name="_phone"/>
+          <Argument type="String" name="_email"/>
+          <Argument type="double" name="_basicSalary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSalary" returnType="double" visibility="public" isAbstract="true"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public">
+          <Argument type="String" name="_address"/>
+        </Method>
+        <Method name="getBasicSalary" returnType="double" visibility="public"/>
+        <Method name="setBasicSalary" returnType="void" visibility="public">
+          <Argument type="double" name="_basicSalary"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="_email"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="_id"/>
+        </Method>
+        <Method name="getLiveExpensive" returnType="double" visibility="public"/>
+        <Method name="setLiveExpensive" returnType="void" visibility="public">
+          <Argument type="double" name="_liveExpensive"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="_name"/>
+        </Method>
+        <Method name="getPhone" returnType="String" visibility="public"/>
+        <Method name="setPhone" returnType="void" visibility="public">
+          <Argument type="String" name="_phone"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="school_managment_system" visibility="public" xPosition="387.0" yPosition="700.0">
+      <Fields>
+        <Field name="bonus" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="_bonus"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="_bonus"/>
+          <Argument type="String" name="_name"/>
+          <Argument type="int" name="_id"/>
+          <Argument type="String" name="_address"/>
+          <Argument type="String" name="_phone"/>
+          <Argument type="String" name="_email"/>
+          <Argument type="double" name="_basicSalary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBonus" returnType="double" visibility="public"/>
+        <Method name="setBonus" returnType="void" visibility="public">
+          <Argument type="double" name="_bonus"/>
+        </Method>
+        <Method name="getSalary" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="School" package="school_managment_system" visibility="public" xPosition="1605.0" yPosition="602.0">
+      <Fields>
+        <Field name="students" type="ArrayList&lt;Student&gt;" visibility="package" isStatic="true"/>
+        <Field name="teachers" type="ArrayList&lt;Teacher&gt;" visibility="package" isStatic="true"/>
+        <Field name="subjects" type="ArrayList&lt;Subject&gt;" visibility="package" isStatic="true"/>
+        <Field name="principal" type="Principal" visibility="package" isStatic="true"/>
+        <Field name="filePath" type="String" visibility="package" isStatic="true"/>
+        <Field name="in" type="Scanner" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="readData" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="addSubject" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="chooseTeacherAndStudent" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="displayCountOfStudents" returnType="void" visibility="private" isStatic="true">
+          <Argument type="Subject" name="_subject"/>
+        </Method>
+        <Method name="displayMenu" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="displayPrincipalSalary" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="displaySuccessfull" returnType="void" visibility="private" isStatic="true">
+          <Argument type="String" name="_string"/>
+        </Method>
+        <Method name="displayTeachersAndStudents" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="displayTeachersSalary" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="getChoice" returnType="int" visibility="private" isStatic="true"/>
+        <Method name="getEmployee" returnType="Employee" visibility="private" isStatic="true">
+          <Argument type="String" name="_string"/>
+        </Method>
+        <Method name="addStudent" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="getSubject" returnType="Subject" visibility="private" isStatic="true"/>
+        <Method name="searchSubject" returnType="Subject" visibility="private" isStatic="true">
+          <Argument type="String" name="_name"/>
+        </Method>
+        <Method name="principalOrTeacherChoise" returnType="int" visibility="private" isStatic="true"/>
+        <Method name="displaySubjects" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="displaySubjectsName" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="displayTeachersName" returnType="void" visibility="private" isStatic="true"/>
+        <Method name="displayStudentsName" returnType="void" visibility="public" isStatic="true"/>
+        <Method name="saveData" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Student" package="school_managment_system" visibility="public" xPosition="779.0" yPosition="188.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="level" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Student" name="_student"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="_id"/>
+          <Argument type="String" name="_name"/>
+          <Argument type="int" name="_level"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="_id"/>
+        </Method>
+        <Method name="getLevel" returnType="int" visibility="public"/>
+        <Method name="setLevel" returnType="void" visibility="public">
+          <Argument type="int" name="_level"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="_name"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Subject" package="school_managment_system" visibility="public" xPosition="1240.0" yPosition="271.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="teacher" type="Teacher" visibility="private"/>
+        <Field name="students" type="ArrayList&lt;Student&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="_name"/>
+          <Argument type="Teacher" name="_teacher"/>
+          <Argument type="Student" name="_students"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addStudent" returnType="boolean" visibility="public">
+          <Argument type="Student" name="_student"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="_name"/>
+        </Method>
+        <Method name="getStudents" returnType="ArrayList&lt;Student&gt;" visibility="public"/>
+        <Method name="getTeacher" returnType="Teacher" visibility="public"/>
+        <Method name="setTeacher" returnType="void" visibility="public">
+          <Argument type="Teacher" name="_teacher"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Teacher" package="school_managment_system" visibility="public" xPosition="1107.0" yPosition="-42.0">
+      <Fields>
+        <Field name="classNo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="_numberOfClasses"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="_numberOfClasses"/>
+          <Argument type="String" name="_name"/>
+          <Argument type="int" name="_id"/>
+          <Argument type="String" name="_address"/>
+          <Argument type="String" name="_phone"/>
+          <Argument type="String" name="_email"/>
+          <Argument type="double" name="_basicSalary"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Teacher" name="_teacher"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getClassNo" returnType="int" visibility="public"/>
+        <Method name="setClassNo" returnType="void" visibility="public">
+          <Argument type="int" name="_classNo"/>
+        </Method>
+        <Method name="getSalary" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="students" source="school_managment_system.Subject" target="school_managment_system.Student" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Student&gt;"/>
+    <IsRelation name="is" source="school_managment_system.Principal" target="school_managment_system.Employee"/>
+    <UseRelation source="school_managment_system.School" target="school_managment_system.Subject" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="school_managment_system.School" target="school_managment_system.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="students" source="school_managment_system.School" target="school_managment_system.Student" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Student&gt;"/>
+    <IsRelation name="is" source="school_managment_system.Teacher" target="school_managment_system.Employee"/>
+    <UseRelation source="school_managment_system.Subject" target="school_managment_system.Student" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="teachers" source="school_managment_system.School" target="school_managment_system.Teacher" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Teacher&gt;"/>
+    <HasRelation name="teacher" source="school_managment_system.Subject" target="school_managment_system.Teacher" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="subjects" source="school_managment_system.School" target="school_managment_system.Subject" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Subject&gt;"/>
+    <HasRelation name="principal" source="school_managment_system.School" target="school_managment_system.Principal" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="school_managment_system.Subject" target="school_managment_system.Teacher" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
